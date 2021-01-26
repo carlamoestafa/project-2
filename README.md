@@ -44,22 +44,22 @@ More feature engineering to include/evaluate transformed, polynomial and interac
 For each additional feature that increased the R^2 validation scores a candidate model were created. Upon the completion of the cross validation process, the R^2 validation score were compared and the model with the highest validation score was selected as the predicting candidate model.
 
 This is the outcome from my cross validation process:
-|      MODEL    |                       FEATURES                            | MEAN R^2 VAL SCORE  |
-| :------------ | :-------------------------------------------------------: | ------------------: |
-| initial model | simple(all simple numerical features)                     |        0.737        |
-| MODEL 1       | simple + opening gross^2                                  |        0.737        |
-| MODEL 2       | simple + budget^2                                         |        0.715        |
-| MODEL 3       | simple + runtime^2                                        |        0.741        |
-| MODEL 4       | simple + runtime^2 + month^2                              |        0.741        |
-| MODEL 5       | simple + runtime^2 + year^2                               |        0.741        |
-| MODEL 6       | simple + runtime^2 + c1 (budget x runtime)                |        0.741        |
-| MODEL 7       | simple + runtime^2 + c2 (opening gross x runtime)         |        0.730        |
-| MODEL 8       | simple + runtime^2 + c3 (opening gross / year)            |        0.743        |
-| MODEL 9       | simple + runtime^2 + c4 (budget / year)                   |        0.744        |
-| MODEL 10      | simple + runtime^2 + c4 + c5 (month x runtime)            |        0.745        |
-| MODEL 11      | simple + runtime^2 + c4 + c5 + c6 (month x year)          |        0.743        |
-| MODEL 12      | simple + runtime^2 + c4 + c5 + c7 (month x opening_gross) |        0.753        |
-| MODEL 13      | simple + runtime^2 + c4 + c5 + c7 + rating(PG + PG_13 + R)|        0.760        |
+|      MODEL     |                       FEATURES                             | MEAN R^2 VAL SCORE  |
+|  :------------ |  :-------------------------------------------------------- | :-----------------: |
+|  initial model |  simple(all simple numerical features)                     |        0.737        |
+|  MODEL 1       |  simple + opening gross^2                                  |        0.737        |
+|  MODEL 2       |  simple + budget^2                                         |        0.715        |
+|  MODEL 3       |  simple + runtime^2                                        |        0.741        |
+|  MODEL 4       |  simple + runtime^2 + month^2                              |        0.741        |
+|  MODEL 5       |  simple + runtime^2 + year^2                               |        0.741        |
+|  MODEL 6       |  simple + runtime^2 + c1 (budget x runtime)                |        0.741        |
+|  MODEL 7       |  simple + runtime^2 + c2 (opening gross x runtime)         |        0.730        |
+|  MODEL 8       |  simple + runtime^2 + c3 (opening gross / year)            |        0.743        |
+|  MODEL 9       |  simple + runtime^2 + c4 (budget / year)                   |        0.744        |
+|  MODEL 10      |  simple + runtime^2 + c4 + c5 (month x runtime)            |        0.745        |
+|  MODEL 11      |  simple + runtime^2 + c4 + c5 + c6 (month x year)          |        0.743        |
+|  MODEL 12      |  simple + runtime^2 + c4 + c5 + c7 (month x opening_gross) |        0.753        |
+|  MODEL 13      |  simple + runtime^2 + c4 + c5 + c7 + rating(PG + PG_13 + R)|        0.760        |
 
 Note : simple feature includes budget, opening_gross, runtime, month and year
 
@@ -81,12 +81,12 @@ Following the project presentation, additional cases were investigated to deal w
 
 ## RESULTS & CONCLUSIONS
 
-|    CASE      |  R^2 TEST SCORE  |    MAE (Million USD)     |
-| :----------- | :--------------: | -----------------------: |
-| CASE 1       |       0.523      |          118.7           |
-| CASE 2       |       0.505      |          116.0           |
-| CASE 3       |       0.714      |           96.9           |
-| CASE 4       |       0.638      |          105.0
+|    CASE      |  R^2 TEST SCORE  |  MAE (Million USD)  |
+|  :---------- | :--------------: | ------------------: |
+|  CASE 1      |       0.523      |          118.7      |
+|  CASE 2      |       0.505      |          116.0      |
+|  CASE 3      |       0.714      |           96.9      |
+|  CASE 4      |       0.638      |          105.0      |
 
 The best predicting model was achieved for Case 3 and the coefficients after LR are as follows:
 
