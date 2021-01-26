@@ -104,4 +104,12 @@ The best predicting model was achieved for Case 3 and the coefficients after LR 
 ![Case 3 Actual vs Prediction](case_3a_lr_s.pdf)
 
 
+## PROJECT DELIVERABLES:
+
+[LINEAR_REGRESSION](project2_lr.ipynb)
+
+[WEB SCRAPING](project2_webscraping.ipynb)
+
+[PPT_FILE](project_2.ppt.pptx)
+
 
